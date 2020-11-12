@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  </head>
+  <body>
+    <!-- data binding  AngularJS applications usually have a data model.-->
+    <div ng-app="myApp" ng-controller="myCtrl">
+      <p>Example of data-binding With jsx Expression: {{Hobby}}</p>
+     <p> Example of data-binding With ng-directive :<span ng-bind="Hobby2"></span></p>
+    </div>
+    <script>
+      var app = angular.module("myApp", []);
+      app.controller("myCtrl", function ($scope) {
+        $scope.Hobby = "Drawing";
+        $scope.Hobby2 = "Singing";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+
+    <!-- ng-controller AngularJS applications are controlled by controllers. -->
+    <div ng-app="myApp" ng-controller="myCtrl">
+        Name: <input type="text" ng-model="Name"> <br><br>
+        Gender : <input type="text" ng-model="gender">
+
+        <p>{{Name +' is '+ gender}}</p>
+    </div>
+    <script>
+
+        var app = angular.module('myApp', []); // The AngularJS application is defined by  ng-app="myApp".
+        app.controller('myCtrl', function($scope) { //The ng-controller="myCtrl" attribute is an AngularJS directive. It defines a controller.
+          $scope.Name = "Kausar";
+          $scope.gender = "Female";
+        });
+        </script>
+</body>
+</html>

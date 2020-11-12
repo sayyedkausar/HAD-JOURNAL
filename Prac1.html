@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <!-- angular directives -->
+    <!-- example -->
+    <div ng-app="" ng-init="Names=['Kausar','Saba','Zeenat','Jainab']"> <!-- ng-init initailze the app -->
+        <p> Name : <input type="text" ng-model="yName"></p> <!-- ng-model binds the value of HTML controls (input, select, textarea) to application data.-->
+        <p>Your name: {{yName}}</p> <!-- jsx expression -->
+        <!-- ng-repeat loop throug the list -->
+        <ul>
+            <li ng-repeat="name in  Names">
+                {{name}}
+            </li>
+        </ul>
+
+    </div>
+</body>
+</html>
